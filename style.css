@@ -13,7 +13,7 @@ body > * {
   width: 30%;
   height: 30%;
   padding: 3rem;
-  display: inline-block;
+  display: none;
 }
 
 .search_btn {
@@ -33,7 +33,7 @@ body > * {
 h3{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   padding: 1em 0;
   margin: 0 10%;
 }
@@ -45,7 +45,7 @@ input[type="text"]{
   font-weight: 400;
   outline: 0;
   border: 0;
-  background: #cecece;
+  background: #fff;
 }
 .searchbar{
   max-height: 3.3rem;
@@ -53,7 +53,10 @@ input[type="text"]{
   margin: 0 10%;
 }
 .logo{
-  display: none;
+  width: 30%;
+  height: 30%;
+  padding: 3rem;
+  display: inline-block;
 }
 .darkmode--activated .logo_light{
   display: none;
@@ -73,17 +76,41 @@ input[type="text"]{
   max-width: 20rem;
   max-height: 15rem;
 }
-
+.darkmode--toggle{
+  z-index: 10;
+  position: absolute;
+}
 @media all and (max-width:480px){
   h3{
     font-size: 1.5rem;
   }
+  .logo_light{
+    width: 50%;
+    height: 50%;
+    margin: 10%;
+    padding: 0%;
+    display: none;
+  }
+
   .logo{
     width: 50%;
     height: 50%;
     margin: 10%;
     padding: 0%;
+    display: inline-block;
   }
+
+  .darkmode--activated .logo_light{
+    display: none;
+  }
+  .darkmode--activated .logo{
+    width: 50%;
+    height: 50%;
+    margin: 10%;
+    padding: 0%;
+    display: inline-block;
+  }
+
   .searchbar{
     max-height: 3rem;
   }
