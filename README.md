@@ -1,7 +1,7 @@
-# GIPHY-Clone 
+# Gify:RE
 
 ## Demo:
-Watch it live (hosted on Netlify) : https://gifsie.netlify.com
+Watch it live (hosted on Netlify) : https://gifyre.netlify.app/
 
 ## Description
 A mini clone of GIPHY using GIPHY API which performs following things: 
