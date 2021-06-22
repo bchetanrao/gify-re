@@ -130,6 +130,7 @@ input[type="text"]{
     padding: 0.2rem;
     max-height: 6rem;
     max-width: 7rem;
+    border-radius: 10px;
   }
 
 }

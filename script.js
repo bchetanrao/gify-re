@@ -32,7 +32,7 @@ document.getElementById("search_gif").addEventListener("click", getGifs);
 
 /*  GIPHY -Trending Endpoint (Fetch GIFs currently trending online) */
 
-const trending_endpoint = `https://api.giphy.com/v1/gifs/trending?api_key=${giphy_api_key}&limit=20`;
+const trending_endpoint = `https://api.giphy.com/v1/gifs/trending?api_key=${giphy_api_key}&limit=30`;
 
 fetch(trending_endpoint)
   .then(api_res => api_res.json())
