@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 html {
-  margin-left: 10%;
-  margin-right: 10%;
   font-family: 'Poppins', sans-serif;
 }
 html > * {
@@ -10,32 +8,14 @@ html > * {
 body > * {
   padding-top: 10px;
 }
-.navbar-brand {
-  font-weight: 900;
-  font-size: 40px;
-}
-.navbar img{
-  padding: 2rem 0;
-}
-.logo{
+
+.logo_light{
   width: 30%;
   height: 30%;
+  padding: 3rem;
+  display: inline-block;
 }
-a {
-  color: #fff;
-}
-.nav-item {
-  margin-right: 5px;
-  font-size: 15px;
-}
-.nav-link_bottom {
-  height: 3px;
-  background: linear-gradient(45deg, #6157ff, #4975cb);
-}
-.nav-link:hover {
-  background: linear-gradient(45deg, #6157ff, #7e48cd);
-  color: #fff;
-}
+
 .search_btn {
   background: #8E2EFF;
   outline: none;
@@ -53,9 +33,9 @@ a {
 h3{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #fff;
+  color: #000;
   padding: 1em 0;
-  margin: 0;
+  margin: 0 10%;
 }
 input[type="text"]{
   width: 100%;
@@ -63,11 +43,37 @@ input[type="text"]{
   padding: 0 1em;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
+  outline: 0;
+  border: 0;
+  background: #cecece;
 }
 .searchbar{
   max-height: 3.3rem;
   margin-bottom: 2rem;
+  margin: 0 10%;
 }
+.logo{
+  display: none;
+}
+.darkmode--activated .logo_light{
+  display: none;
+}
+.darkmode--activated .logo{
+  width: 30%;
+  height: 30%;
+  padding: 3rem;
+  display: inline-block;
+}
+.flax{
+  margin: 0 10%;
+}
+.flax img{
+  border-radius: 12px;
+  padding: 0.5rem;
+  max-width: 20rem;
+  max-height: 15rem;
+}
+
 @media all and (max-width:480px){
   h3{
     font-size: 1.5rem;
@@ -75,9 +81,19 @@ input[type="text"]{
   .logo{
     width: 50%;
     height: 50%;
+    margin: 10%;
+    padding: 0%;
   }
   .searchbar{
     max-height: 3rem;
+  }
+  .flax{
+    margin: 5%;
+  }
+  .flax img{
+    padding: 0.2rem;
+    max-height: 6rem;
+    max-width: 7rem;
   }
 
 }
