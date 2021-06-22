@@ -34,7 +34,7 @@ h3{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #fff;
-  padding: 1em 0;
+  padding: 1em 0.2rem 0;
   margin: 0 10%;
 }
 input[type="text"]{
@@ -71,7 +71,7 @@ input[type="text"]{
   margin: 0 10%;
 }
 .flax img{
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 0.5rem;
   max-width: 20rem;
   max-height: 15rem;
@@ -80,9 +80,18 @@ input[type="text"]{
   z-index: 10;
   position: absolute;
 }
+
+.page-footer{
+  background: #8E2EFF;
+}
 @media all and (max-width:480px){
   h3{
     font-size: 1.5rem;
+    padding: 0;
+  }
+  .search_btn{
+    width: 30%;
+    padding: 0;
   }
   .logo_light{
     width: 50%;
