@@ -12,4 +12,6 @@ A mini clone of GIPHY using GIPHY API which performs following things:
 
 ## Built with 
 HTML, CSS, JavaScript and Bootstrap
+
+##
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b14ff6b1-773d-490d-bb6b-bf2059a40b20/deploy-status)](https://app.netlify.com/sites/gifyre/deploys)
