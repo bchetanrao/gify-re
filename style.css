@@ -8,24 +8,12 @@ html > * {
 body > * {
   padding-top: 10px;
 }
-
-.logo_light{
-  width: 30%;
-  height: 30%;
-  padding: 3rem;
-  display: none;
-}
-
 .search_btn {
   background: #8E2EFF;
   outline: none;
   width: 10rem;
   border-radius: 0 50px 50px 0;
   border: none;
-}
-.banner_img img {
-  width: 100%;
-  padding: 1.5rem 0;
 }
 .trending_gifs {
   margin: 10px;
@@ -58,15 +46,6 @@ input[type="text"]{
   padding: 3rem;
   display: inline-block;
 }
-.darkmode--activated .logo_light{
-  display: none;
-}
-.darkmode--activated .logo{
-  width: 30%;
-  height: 30%;
-  padding: 3rem;
-  display: inline-block;
-}
 .flax{
   margin: 0 10%;
 }
@@ -76,14 +55,10 @@ input[type="text"]{
   max-width: 20rem;
   max-height: 15rem;
 }
-.darkmode--toggle{
-  z-index: 10;
-  position: absolute;
-}
-
 .page-footer{
   background: #8E2EFF;
 }
+
 @media all and (max-width:480px){
   h3{
     font-size: 1.5rem;
@@ -93,26 +68,8 @@ input[type="text"]{
     width: 30%;
     padding: 0;
   }
-  .logo_light{
-    width: 50%;
-    height: 50%;
-    margin: 10%;
-    padding: 0%;
-    display: none;
-  }
 
   .logo{
-    width: 50%;
-    height: 50%;
-    margin: 10%;
-    padding: 0%;
-    display: inline-block;
-  }
-
-  .darkmode--activated .logo_light{
-    display: none;
-  }
-  .darkmode--activated .logo{
     width: 50%;
     height: 50%;
     margin: 10%;
