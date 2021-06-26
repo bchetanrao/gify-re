@@ -17,9 +17,7 @@ function getGifs() {
       const gifs = gif_array
 
         .map(
-          gif => `<div class="flex-fill">
-                                                    <img src=${gif}>
-                                                    </div>`
+          gif => `<div class="flex-fill"><img src=${gif}></div>`
         )
         .join();
       /* Displaying the output */
