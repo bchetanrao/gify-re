@@ -38,18 +38,20 @@
     </nav>
 
     <!-- Search Box -->          
-    <div class="d-flex justify-content-between searchbar darkmode-ignore">
-        <input type="text" class="w-100" id="gifs" placeholder="Search" class="searchbar">
-        <button class='search_btn' id="search_gif" >
+    <div class="d-flex justify-content-between searchbar">
+        <input type="text" class="w-100" id="gifs" placeholder="Search" class="searchbar" onfocus="this.value=''">
+        <button class='search_btn' id="search_gif" onclick="myFunction()" >
             <img src='images/search-icon.svg' width="50%" height="50%">
         </button>
     </div>
-    
+    <br>
+
     <!-- Display for GIF Images -->
+    <h3 id="searched_element"></h3><br>
     <div class ="d-flex flex-wrap justify-content flex-grow-1 flax" id="display_gif"></div>
 
     <!-- Trending GIFs -->
-    <h3>Trending</h3>
+    <h3>Trending</h3><br>
     <div id="trending_gifs" class="d-flex flex-wrap justify-content-center flex-grow-1 flax"></div>
     <br><br><br><br><br><br>
 

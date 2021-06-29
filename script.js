@@ -28,6 +28,14 @@ function getGifs() {
 
 document.getElementById("search_gif").addEventListener("click", getGifs);
 
+var input = document.getElementById("gifs");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("search_gif").click();
+  }
+});
+
 /*  GIPHY -Trending Endpoint (Fetch GIFs currently trending online) */
 
 const trending_endpoint = `https://api.giphy.com/v1/gifs/trending?api_key=${giphy_api_key}&limit=30`;
@@ -44,3 +52,8 @@ fetch(trending_endpoint)
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
   })
   .catch(err => console.log(err));
+
+ function myFunction(){
+   var x = document.getElementById("gifs").value;
+   document.getElementById("searched_element").innerHTML =  x;
+ }

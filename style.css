@@ -22,7 +22,8 @@ h3{
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #fff;
-  padding: 1em 0.2rem 0;
+  /* padding: 1em 0.2rem 0; */
+  padding: 0%;
   margin: 0 10%;
 }
 input[type="text"]{
@@ -49,7 +50,10 @@ input[type="text"]{
 .flax{
   margin: 0 10%;
   color: #313131;
+  padding: 0;
+  /* margin-bottom: 2rem; */
 }
+
 .flax img{
   border-radius: 14px;
   padding: 0.5rem;
