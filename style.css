@@ -64,6 +64,10 @@ input[type="text"]{
   background: #8E2EFF;
 }
 
+#searched_element{
+  margin-bottom: 1rem;
+}
+
 @media all and (max-width:480px){
   h3{
     font-size: 1.5rem;
