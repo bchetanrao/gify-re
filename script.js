@@ -24,6 +24,21 @@ function getGifs() {
       document.getElementById("display_gif").innerHTML = gifs;
     })
     .catch(err => console.log(err));
+
+    // tried out webshare api
+    const title = window.document.title;
+    const url = window.document.location.href;
+
+    document.getElementById("display_gifs").addEventListener('click', ()=>{
+      if(navigator.share){
+        navigator.share({
+          title: `${title}`,
+          url: `${url}`
+        }).then(() =>{
+          console.log('thanks for sharing');
+        })
+      }
+    })
 }
 
 document.getElementById("search_gif").addEventListener("click", getGifs);
