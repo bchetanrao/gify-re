@@ -48,10 +48,9 @@ input[type="text"]{
   display: inline-block;
 }
 .flax{
-  margin: 0 10%;
+  margin: 2% 10%;
   color: #313131;
   padding: 0;
-  /* margin-bottom: 2rem; */
 }
 
 .flax img{
@@ -70,14 +69,16 @@ input[type="text"]{
 
 @media all and (max-width:480px){
   h3{
+    margin: 0 3%;
     font-size: 1.5rem;
     padding: 0;
   }
   .search_btn{
     width: 30%;
     padding: 0;
+    display: inline-block;
+    padding: auto;
   }
-
   .logo{
     width: 50%;
     height: 50%;
@@ -87,15 +88,16 @@ input[type="text"]{
   }
 
   .searchbar{
-    max-height: 3rem;
+    margin: 0 3%;
+    max-height: 2.7rem;
   }
   .flax{
-    margin: 5%;
+    margin: 2% 1%;
   }
   .flax img{
     padding: 0.2rem;
-    max-height: 6rem;
-    max-width: 7rem;
+    max-height: 7rem;
+    /* max-width: 8rem; */
     border-radius: 7px;
   }
 
