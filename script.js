@@ -58,18 +58,3 @@ fetch(trending_endpoint)
    var x = document.getElementById("gifs").value;
    document.getElementById("searched_element").innerHTML =  x;
  }
-
-  // tried out webshare api
-  const title = window.document.title;
-  const url = window.document.location.href;
-
-  trending_gifs.addEventListener('click', ()=>{
-    if(navigator.share){
-      navigator.share({
-        title: `${title}`,
-        url: `${url}`
-      }).then(() =>{
-        console.log('thanks for sharing');
-      })
-    }
-  })
