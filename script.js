@@ -61,19 +61,17 @@ fetch(trending_endpoint)
    document.getElementById("searched_element").innerHTML =  x;
  }
 
-// web share api
-const title = window.title;
-const url = window.location.href;
-document.getElementById("logo_share").addEventListener('click', event => {
-  if (navigator.share) {
+// tried out webshare api
+const title = window.document.title;
+const url = window.document.location.href;
+
+document.getElementById("logo_share").addEventListener('click', ()=>{
+  if(navigator.share){
     navigator.share({
       title: `${title}`,
       url: `${url}`
-    }).then(() => {
-      console.log('Thanks for sharing!');
+    }).then(() =>{
+      console.log('thanks for sharing');
     })
-    .catch(console.error);
-  } else {
-    // fallback
   }
-});
+})
