@@ -47,7 +47,7 @@ fetch(trending_endpoint)
       gif => gif.images.downsized.url
     );
     const trending_gifs = trending_gifs_array
-      .map(gif => `<img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch">`)
+      .map(gif => `<a href=${gif}><img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`)
       .join();
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
   })
