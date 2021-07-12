@@ -24,21 +24,6 @@ function getGifs() {
       document.getElementById("display_gif").innerHTML = gifs;
     })
     .catch(err => console.log(err));
-
-    // tried out webshare api
-    const title = window.document.title;
-    const url = window.document.location.href;
-
-    document.getElementById("display_gifs").addEventListener('click', ()=>{
-      if(navigator.share){
-        navigator.share({
-          title: `${title}`,
-          url: `${url}`
-        }).then(() =>{
-          console.log('thanks for sharing');
-        })
-      }
-    })
 }
 
 // perform search on pressing enter key
@@ -70,7 +55,23 @@ fetch(trending_endpoint)
   })
   .catch(err => console.log(err));
 
+  // displaying name of searched gif 
  function myFunction(){
    var x = document.getElementById("gifs").value;
    document.getElementById("searched_element").innerHTML =  x;
  }
+
+  // tried out webshare api
+  const title = window.document.title;
+  const url = window.document.location.href;
+
+  trending_gifs.addEventListener('click', ()=>{
+    if(navigator.share){
+      navigator.share({
+        title: `${title}`,
+        url: `${url}`
+      }).then(() =>{
+        console.log('thanks for sharing');
+      })
+    }
+  })
