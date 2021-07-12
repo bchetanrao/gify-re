@@ -60,3 +60,20 @@ fetch(trending_endpoint)
    var x = document.getElementById("gifs").value;
    document.getElementById("searched_element").innerHTML =  x;
  }
+
+// web share api
+const title = window.title;
+const url = window.location.href;
+document.getElementById("logo_share").addEventListener('click', event => {
+  if (navigator.share) {
+    navigator.share({
+      title: `${title}`,
+      url: `${url}`
+    }).then(() => {
+      console.log('Thanks for sharing!');
+    })
+    .catch(console.error);
+  } else {
+    // fallback
+  }
+});
