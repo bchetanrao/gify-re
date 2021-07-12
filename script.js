@@ -15,7 +15,7 @@ function getGifs() {
 
       /* Outputing a <img> element for every GIFs */
       const gifs = gif_array.map(
-          gif => `<a href=${gif} ><img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`
+          gif => `<a href=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"><img src=${gif} alt="searched gifs" class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`
         )
         .join();
       /* Displaying the output */
@@ -47,9 +47,11 @@ fetch(trending_endpoint)
       gif => gif.images.downsized.url
     );
     const trending_gifs = trending_gifs_array
-      .map(gif => `<a href=${gif}><img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`)
+      .map(gif => `<a href=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"><img src=${gif} alt="trending gifs" class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`)
       .join();
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
+
+    console.log(trending_gifs)
   })
   .catch(err => console.log(err));
 
