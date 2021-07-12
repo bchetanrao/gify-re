@@ -17,7 +17,7 @@ function getGifs() {
       const gifs = gif_array
 
         .map(
-          gif => `<div class="d-flex flex-fill justify-content-center align-self-stretch"><img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"></div>`
+          gif => `<img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch">`
         )
         .join();
       /* Displaying the output */
@@ -49,7 +49,7 @@ fetch(trending_endpoint)
       gif => gif.images.downsized.url
     );
     const trending_gifs = trending_gifs_array
-      .map(gif => `<div class="d-flex flex-fill justify-content-center align-self-stretch"><img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"></div>`)
+      .map(gif => `<img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch">`)
       .join();
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
   })
