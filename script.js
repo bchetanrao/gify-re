@@ -14,10 +14,8 @@ function getGifs() {
       const gif_array = api_output.data.map(gif => gif.images.downsized.url);
 
       /* Outputing a <img> element for every GIFs */
-      const gifs = gif_array
-
-        .map(
-          gif => `<img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch">`
+      const gifs = gif_array.map(
+          gif => `<a href=${gif} ><img src=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`
         )
         .join();
       /* Displaying the output */
