@@ -78,12 +78,10 @@ function share(urlx){
   if(navigator.share){
     navigator.share({
       title: `${title}`,
-      text: 'Search and share GIFs through Gify-Re',
-      url: `${urlx}`
+      url: `${urlx}`,
+      text: 'Search and share GIFs through Gify-Re'
     }).then(() =>{
       console.log('thanks for sharing');
     })
   }
-  console.log("function works!!");
-  console.log(urlx);
 }
