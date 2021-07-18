@@ -15,7 +15,7 @@ function getGifs() {
 
       /* Outputing a <img> element for every GIFs */
       const gifs = gif_array.map(
-          gif => `<button onclick="share('${gif}')"><img src=${gif} alt="searched gifs"></button>`
+          gif => `<a onclick="share('${gif}')"><img src=${gif} alt="searched gifs"></a>`
         )
         .join();
       /* Displaying the output */
@@ -47,9 +47,10 @@ fetch(trending_endpoint)
       gif => gif.images.fixed_width.url
     );
     const trending_gifs = trending_gifs_array
-      .map(gif => `<button onclick="share('${gif}')"><img src=${gif} alt="trending gifs"></button>`)
+      .map(gif => `<a onclick="share('${gif}')"><img src=${gif} alt="trending gifs"></a>`)
       .join();
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
+
   })
   .catch(err => console.log(err));
 
@@ -79,7 +80,7 @@ function share(urlx){
     navigator.share({
       title: `${title}`,
       url: `${urlx}`,
-      text: 'Search and share GIFs through Gify-Re'
+      text: 'Search and share GIFs through Gify-Re',
     }).then(() =>{
       console.log('thanks for sharing');
     })
