@@ -70,6 +70,15 @@ input[type="text"]{
   background-color: #8E2EFF;
 }
 
+button{
+  width: 100%;
+  height: auto;
+  background-color: #313131;
+  color: #313131;
+  border: none;
+  outline: none;
+}
+
 @media all and (max-width:480px){
   h3{
     margin: 0 3%;
