@@ -50,8 +50,6 @@ fetch(trending_endpoint)
       .map(gif => `<a href=${gif} target="_blank"><img src=${gif} alt="trending gifs"></a>`)
       .join();
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
-    
-    console.log(api_output.data);
 
   })
   .catch(err => console.log(err));

@@ -67,6 +67,7 @@ input[type="text"]{
   height: auto;
   border-radius: 10px;
   margin-bottom: 1rem;
+  background-color: #8E2EFF;
 }
 
 @media all and (max-width:480px){
