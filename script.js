@@ -15,7 +15,7 @@ function getGifs() {
 
       /* Outputing a <img> element for every GIFs */
       const gifs = gif_array.map(
-          gif => `<a href=${gif} target="_blank"><img src=${gif} alt="searched gifs"  id="gif_image"></a>`
+          gif => `<button onclick="share('${gif}')"><img src=${gif} alt="searched gifs"></button>`
         )
         .join();
       /* Displaying the output */
@@ -47,10 +47,9 @@ fetch(trending_endpoint)
       gif => gif.images.fixed_width.url
     );
     const trending_gifs = trending_gifs_array
-      .map(gif => `<button onclick="share('${gif}')"><img src=${gif} alt="trending gifs" id="gif_image"></button>`)
+      .map(gif => `<button onclick="share('${gif}')"><img src=${gif} alt="trending gifs"></button>`)
       .join();
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
-
   })
   .catch(err => console.log(err));
 
@@ -74,10 +73,11 @@ document.getElementById("logo_share").addEventListener('click', ()=>{
     })
   }
 })
+const titlex = window.document.title;
 function share(urlx){
   if(navigator.share){
     navigator.share({
-      // title: `${title}`,
+      title: `${title}`,
       url: `${urlx}`
     }).then(() =>{
       console.log('thanks for sharing');
