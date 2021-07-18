@@ -15,7 +15,7 @@ function getGifs() {
 
       /* Outputing a <img> element for every GIFs */
       const gifs = gif_array.map(
-          gif => `<a href=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch" target="_blank"><img src=${gif} alt="searched gifs" class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`
+          gif => `<a href=${gif} target="_blank"><img src=${gif} alt="searched gifs"></a>`
         )
         .join();
       /* Displaying the output */
@@ -44,12 +44,14 @@ fetch(trending_endpoint)
   .then(api_res => api_res.json())
   .then(api_output => {
     const trending_gifs_array = api_output.data.map(
-      gif => gif.images.downsized.url
+      gif => gif.images.fixed_width.url
     );
     const trending_gifs = trending_gifs_array
-      .map(gif => `<a href=${gif} class="d-flex flex-fill justify-content-space-between align-self-stretch" target="_blank"><img src=${gif} alt="trending gifs" class="d-flex flex-fill justify-content-space-between align-self-stretch"></a>`)
+      .map(gif => `<a href=${gif} target="_blank"><img src=${gif} alt="trending gifs"></a>`)
       .join();
     document.getElementById("trending_gifs").innerHTML = trending_gifs;
+    
+    console.log(api_output.data);
 
   })
   .catch(err => console.log(err));

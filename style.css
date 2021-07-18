@@ -47,23 +47,25 @@ input[type="text"]{
   padding: 3rem;
   display: inline-block;
 }
-.flax{
-  margin: 2% 10%;
-  color: #313131;
-  padding: 0;
-}
-
-.flax img{
-  border-radius: 14px;
-  padding: 0.5rem;
-  max-width: 20rem;
-  max-height: 15rem;
-}
 .page-footer{
   background: #8E2EFF;
 }
 
 #searched_element{
+  margin-bottom: 1rem;
+}
+
+.grid_container{
+  column-count: 4;
+  column-gap: 1rem;
+  margin: 0 10%;
+  color: #313131;
+  font-size: 0%;
+}
+.grid_container img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
   margin-bottom: 1rem;
 }
 
@@ -91,14 +93,15 @@ input[type="text"]{
     margin: 0 3%;
     max-height: 2.7rem;
   }
-  .flax{
-    margin: 2% 1%;
+  .grid_container{
+    column-count: 2;
+    column-gap: 0.5rem;
+    margin: 0% 2%;
   }
-  .flax img{
-    padding: 0.2rem;
-    max-height: 7rem;
-    /* max-width: 8rem; */
-    border-radius: 7px;
+  .grid_container img{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
   }
 
 }
