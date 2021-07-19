@@ -58,6 +58,7 @@ fetch(trending_endpoint)
  function myFunction(){
    var x = document.getElementById("gifs").value;
    document.getElementById("searched_element").innerHTML =  x;
+   document.getElementById("gifs").value = '';
  }
 
 // tried out webshare api
