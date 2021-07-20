@@ -5,7 +5,7 @@ const giphy_api_key = "DGBskRLgWTdXCUFW66yuyeEelLwevAfL";
 function getGifs() {
   /* GIPHY API Key */
   const gif = document.getElementById("gifs").value;
-  const search_endpoint = `https://api.giphy.com/v1/gifs/search?q=${gif}&api_key=${giphy_api_key}&limit=30`;
+  const search_endpoint = `https://api.giphy.com/v1/gifs/search?q=${gif}&api_key=${giphy_api_key}&limit=50`;
 
   /* Fetching Data from the API */
   fetch(search_endpoint)
@@ -38,7 +38,7 @@ input.addEventListener("keyup", function(event) {
 
 /*  GIPHY -Trending Endpoint (Fetch GIFs currently trending online) */
 
-const trending_endpoint = `https://api.giphy.com/v1/gifs/trending?api_key=${giphy_api_key}&limit=30`;
+const trending_endpoint = `https://api.giphy.com/v1/gifs/trending?api_key=${giphy_api_key}`;
 
 fetch(trending_endpoint)
   .then(api_res => api_res.json())
