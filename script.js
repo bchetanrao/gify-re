@@ -32,6 +32,7 @@ input.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) {
    event.preventDefault();
    document.getElementById("search_gif").click();
+   document.getElementById("gifs").blur();
   }
 });
 
