@@ -5,6 +5,7 @@ const giphy_api_key = "DGBskRLgWTdXCUFW66yuyeEelLwevAfL";
 function getGifs() {
   /* GIPHY API Key */
   const gif = document.getElementById("gifs").value;
+  document.querySelector('.search_space').style.display = 'block';
   const search_endpoint = `https://api.giphy.com/v1/gifs/search?q=${gif}&api_key=${giphy_api_key}&limit=50`;
 
   /* Fetching Data from the API */
